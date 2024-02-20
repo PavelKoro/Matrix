@@ -4,9 +4,7 @@
 #define EPS 0.000000000001
 
 Equation::Equation(int n): Gauss(n) {}
-
 Equation::Equation(Equation &other): Gauss(other) {}
-
 Equation::~Equation() {}
 
 double Equation::proper_value() {

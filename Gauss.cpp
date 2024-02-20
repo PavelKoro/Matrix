@@ -1,19 +1,9 @@
 #include <iostream>
 #include "Gauss.h"
 
-Gauss::Gauss(int n): Matrix2D(n) {
-    // arr = new double[n*n];
-    // for(int i=0; i<n*n; i++) arr[i]=i;
-}
-
-Gauss::Gauss(Gauss &other): Matrix2D(other) {
-    // arr = new double[n*n];
-    // for(int i=0; i<n*n; i++) arr[i]=other.arr[i];
-}
-
-Gauss::~Gauss() {
-    // delete[] arr;
-}
+Gauss::Gauss(int n): Matrix2D(n) {}
+Gauss::Gauss(Gauss &other): Matrix2D(other) {}
+Gauss::~Gauss() {}
 
 void Gauss::gauss_method() {
     int max = 0;
