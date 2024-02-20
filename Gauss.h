@@ -5,10 +5,8 @@
 
 class Gauss : public Matrix2D
 {
-  double *arr; // матрица
-  int n = get_N(); // размер матрицы n*n
   int sign;
-    
+  
   public:
     Gauss(int n);
     Gauss(Gauss &other);

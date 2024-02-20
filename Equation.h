@@ -4,10 +4,7 @@
 #include "Gauss.h"
 
 class Equation: public Gauss 
-{
-    double *matr; // матрица
-    int n = get_N(); // размер матрицы n*n
-    
+{   
     public:
         Equation(int n);
         Equation(Equation &other);

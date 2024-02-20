@@ -5,9 +5,10 @@
 #include <cstdio>
 
 class Matrix2D {
-  double *data;
-  int n;
-  int ERROR;
+  protected:
+    double *data;
+    int n;
+    int ERROR;
 
   public:
     Matrix2D(int n);

@@ -3,25 +3,17 @@
 
 #define EPS 0.000000000001
 
-Equation::Equation(int n): Gauss(n) {
-    matr = new double[n*n];
-    for(int i=0; i<n*n; i++) matr[i]=i;
-}
+Equation::Equation(int n): Gauss(n) {}
 
-Equation::Equation(Equation &other): Gauss(other) {
-    matr = new double[n*n];
-    for(int i=0; i<n*n; i++) matr[i]=other.matr[i];
-}
+Equation::Equation(Equation &other): Gauss(other) {}
 
-Equation::~Equation() {
-    delete[] matr;
-}
+Equation::~Equation() {}
 
 double Equation::proper_value() {
     double a = coef_A(0)/*-*/, b = coef_B(0)/*+*/, c;
     while(1) {
         c = (a+b)/2.0;
-        if(matrix_diff(c) > 0) {
+        if(matrix_diff(c) >= 0) {
             b = c;
         } else {
             a = c;
